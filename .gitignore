@@ -1,9 +1,30 @@
+/.web-server-pid
+/app/config/parameters.yml
+/build/
+/phpunit.xml
+/var/*
+!/var/cache
+/var/cache/*
+!var/cache/.gitkeep
+!/var/logs
+/var/logs/*
+!var/logs/.gitkeep
+!/var/sessions
+/var/sessions/*
+!var/sessions/.gitkeep
+!var/SymfonyRequirements.php
+/vendor/
+/web/bundles/
+/.idea/
+
+
 # Logs
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
 
 # Runtime data
 pids
@@ -16,6 +37,7 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
+dist
 
 # nyc test coverage
 .nyc_output
@@ -37,7 +59,6 @@ node_modules/
 jspm_packages/
 
 # Typescript v1 declaration files
-typings/
 
 # Optional npm cache directory
 .npm
