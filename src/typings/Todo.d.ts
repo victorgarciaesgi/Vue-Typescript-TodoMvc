@@ -1,5 +1,3 @@
-
-
 export interface ITodosState {
   todos: ITodo[],
   visibility: 'all'|'completed'|'active',

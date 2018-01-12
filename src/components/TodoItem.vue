@@ -18,10 +18,9 @@
 import Vue from "vue";
 import Component from "vue-class-component";
 import { Prop } from "vue-property-decorator";
-import { State, Getter, Mutation, Action, namespace } from "vuex-class";
+import { State, Mutation, Action, namespace } from "vuex-class";
+import { ITodo } from "@types";
 
-
-const TodoGetter = namespace("TodoModule", Getter);
 const TodoMutation = namespace("TodoModule", Mutation);
 const TodoAction = namespace("TodoModule", Action);
 
@@ -36,13 +35,13 @@ const TodoAction = namespace("TodoModule", Action);
   }
 })
 export default class TodoItem extends Vue {
-  @Prop() todo;
+  @Prop({ required: true }) todo: ITodo;
 
-@TodoMutation removeTodo;
+  @TodoMutation removeTodo;
   @TodoAction editTodoAction;
 
-  public beforeEdit = "";
-  public editedTodo = null;
+  public beforeEdit: string = "";
+  public editedTodo: ITodo = null;
 
   editTodo(todo) {
     this.beforeEdit = todo.title;
@@ -62,3 +61,28 @@ export default class TodoItem extends Vue {
   }
 }
 </script> 
+
+
+<style>
+/*
+	Hack to remove background from Mobile Safari.
+	Can't use it globally since it destroys checkboxes in Firefox
+*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.toggle-all,
+	.todo-list li .toggle {
+		background: none;
+	}
+
+	.todo-list li .toggle {
+		height: 40px;
+	}
+
+	.toggle-all {
+		-webkit-transform: rotate(90deg);
+		transform: rotate(90deg);
+		-webkit-appearance: none;
+		appearance: none;
+	}
+}
+</style>

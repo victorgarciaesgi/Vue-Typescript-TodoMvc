@@ -25,7 +25,7 @@ const configProd = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.s?css$/,
         use: extractSass.extract({
           use: [{
             loader: 'css-loader',
