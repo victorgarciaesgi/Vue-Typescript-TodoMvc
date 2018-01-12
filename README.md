@@ -1,6 +1,7 @@
 # Vue.js + Typescript + Vuex • [TodoMVC](http://todomvc.com)
 
 > The Progressive JavaScript Framework
+
 > Javascript that scales
 
 
@@ -22,7 +23,6 @@ TodoMVC written in Vue 2.5, Webpack 3, Typescript 2.6 and Vuex.
 
 The app was written from the TodoMVC Vue.js app by Evan You.
 I splited the app between components and put all the logic inside the Vuex store management!
-Styles from 'todomvc-app-css' are placed in each components too.
 
 ## To discover more
 
@@ -32,7 +32,7 @@ Styles from 'todomvc-app-css' are placed in each components too.
 
 ## Credit
 
-Created by [Victor Garcia](http://your-website.com)
+Created by [Victor Garcia](http://garciavictor.fr)
 
 # Installation
 
@@ -44,13 +44,13 @@ $ npm install
 $ yarn
 ```
 
-## Develop
+## Development
 
 ```bash
 npm run dev
 ```
 
-## Prod
+## Production build
 
 ```bash
 npm run prod
