@@ -1,13 +1,12 @@
 {
-  "name": "moving_mate",
+  "name": "Vue-Typescript-TodoMVC",
   "version": "1.0.0",
-  "main": "index.js",
   "author": "Victor Garcia <victorgarciaparis13@gmail.com>",
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress",
     "server:prod": "cross-env NODE_ENV=production nodemon Server.js",
-    "prod": "concurrently --kill-others \"cross-env NODE_ENV=production npm run clean && npm run build:prod\" \"npm run server:prod\"",
+    "prod": "npm run clean && npm run build:prod && npm run server:prod",
     "clean": "rimraf dist",
     "build:prod": "webpack --display-entrypoints --config  config/webpack.config.prod.js --progress"
   },
